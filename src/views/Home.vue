@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
+    <h1>Home</h1><br>
+
   </div>
 </template>
 
@@ -8,11 +9,11 @@
 </style>
 
 <script>
+import axios from 'axios';
+
 export default {
   data: function() {
-    return {
-      message: "Welcome to Vue.js!"
-    };
+    return {}
   },
   created: function() {},
   methods: {}

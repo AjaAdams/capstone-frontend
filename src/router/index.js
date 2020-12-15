@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import SubjectIndex from '../views/SubjectIndex.vue'
 import SongIndex from '../views/SongIndex.vue'
+import SongShow from '../views/SongShow.vue'
+import Admin from '../views/Admin.vue'
 
 Vue.use(VueRouter)
 
@@ -29,6 +31,16 @@ const routes = [
     path: '/songs',
     name: 'SongIndex',
     component: SongIndex
+  },
+  {
+    path: '/songs/:id',
+    name: 'song-show',
+    component: SongShow
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: Admin
   }
 ]
 

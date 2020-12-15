@@ -2,14 +2,14 @@
   <div class="songs">
     <h1>All Songs</h1>
     <div v-for="song in songs">
+      <router-link v-bind:to="`/songs/${song.id}`">
       <img v-bind:src="song.image_url" v-bind:alt="song.album">
       <h2>{{ song.title }}</h2>
+      </router-link>
       <h3>{{ song.artist }}</h3>
       <h3>{{ song.album }}</h3>
       <h3>{{ song.year }}</h3>
       <h4>{{ song.genre }}</h4>
-      
-
     </div>
   </div>
 </template>
