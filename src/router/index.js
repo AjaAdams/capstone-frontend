@@ -5,6 +5,10 @@ import SubjectIndex from '../views/SubjectIndex.vue'
 import SongIndex from '../views/SongIndex.vue'
 import SongShow from '../views/SongShow.vue'
 import Admin from '../views/Admin.vue'
+import SubjectShow from '../views/SubjectShow'
+import Login from '../views/Login.vue'
+import Signup from '../views/Signup.vue'
+import Logout from '../views/Logout.vue'
 
 Vue.use(VueRouter)
 
@@ -41,6 +45,26 @@ const routes = [
     path: '/admin',
     name: 'admin',
     component: Admin
+  },
+  {
+    path: '/subjects/:id',
+    name: 'subject-show',
+    component: SubjectShow
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: Signup
+  },
+  {
+    path: '/logout',
+    name: 'logout',
+    component: Logout
   }
 ]
 
