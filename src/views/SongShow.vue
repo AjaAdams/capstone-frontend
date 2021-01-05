@@ -4,6 +4,8 @@
    <img v-bind:src="song.image_url" v-bind:alt="song.title">
    <h2>{{ song.artist }}</h2>
   </div>
+
+
 </template>
 
 <style>
@@ -13,6 +15,8 @@
 import axios from 'axios'
 
 export default {
+  // components: {geniusLyrics},
+
   data: function() {
     return {
       song: {}
@@ -24,6 +28,7 @@ export default {
       console.log("show song", this.song)
     });
   },
+  
   methods: {}
 };
 </script>

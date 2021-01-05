@@ -9,6 +9,7 @@ import SubjectShow from '../views/SubjectShow'
 import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
 import Logout from '../views/Logout.vue'
+import GeniusLyrics from '../components/GeniusLyrics'
 
 Vue.use(VueRouter)
 
@@ -65,7 +66,12 @@ const routes = [
     path: '/logout',
     name: 'logout',
     component: Logout
-  }
+  },
+  {
+    path: '/lyrics',
+    name: 'GeniusLyrics',
+    component: GeniusLyrics
+  },
 ]
 
 const router = new VueRouter({

@@ -1,7 +1,7 @@
 <template>
   <div class="show">
    <h1>{{ subject.name }}</h1>
-   <div v-for="subject in song.subjects">
+   <div v-for="song in song_subjects">
      <h2> {{ song.title }}</h2>
    </div>
   </div>
@@ -16,6 +16,8 @@ import axios from 'axios'
 export default {
   data: function() {
     return {
+      song: {},
+      song_subjects: [],
       subject: {}
     };
   },

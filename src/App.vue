@@ -37,3 +37,11 @@
   color: #42b983;
 }
 </style>
+
+<script>
+import { getLyrics, getSong } from 'genius-lyrics-api';
+import GeniusLyrics from "./components/geniusLyrics.vue"
+export default {
+  
+}
+</script>
