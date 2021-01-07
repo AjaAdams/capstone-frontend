@@ -15,7 +15,7 @@
 import axios from 'axios'
 
 export default {
-  // components: {geniusLyrics},
+  // components: {GeniusLyrics},
 
   data: function() {
     return {
@@ -27,6 +27,7 @@ export default {
       this.song = response.data;
       console.log("show song", this.song)
     });
+    // getLyrics(options).then((lyrics) => console.log(lyrics));
   },
   
   methods: {}
