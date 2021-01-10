@@ -10,7 +10,7 @@
 import axios from 'axios';
 
 export default {
-  name: "GeniusLyrics",
+  name: "genius-lyrics",
 
   props: {
     options: {
@@ -21,24 +21,28 @@ export default {
   },
   data: function() {
     return {
-      lyrics: ""
+      lyrics: "",
+      // options: {
+      //   apiKey: "FNHwCV1BrIGO0Wh6GBDem1acsw-rD8yfwHQ4lC4o0htDi6N5omW5V6H5c-IDFshbNSm28SWJpPQQMtbpGEnIQA",
+      //   title: 'Blinding Lights',
+      //   artist: 'The Weeknd',
+      //   optimizeQuery: true,
+      // }
     };
   },
-  // created: function() {
-  //  getLyrics(options).then((lyrics) => console.log(lyrics));
-  // },
+  created: function() {},
 
   methods:{
-    getLyrics(){
-      const options = {
-        apiKey: "FNHwCV1BrIGO0Wh6GBDem1acsw-rD8yfwHQ4lC4o0htDi6N5omW5V6H5c-IDFshbNSm28SWJpPQQMtbpGEnIQA",
-        title: 'Blinding Lights',
-        artist: 'The Weeknd',
-        optimizeQuery: true,
-      };
-      getLyrics(options).then((lyrics) => console.log(lyrics));
-    }
-  },
+    // getLyrics(options){
+      // const options = {
+      //   apiKey: "FNHwCV1BrIGO0Wh6GBDem1acsw-rD8yfwHQ4lC4o0htDi6N5omW5V6H5c-IDFshbNSm28SWJpPQQMtbpGEnIQA",
+      //   title: 'Blinding Lights',
+      //   artist: 'The Weeknd',
+      //   optimizeQuery: true,
+      // };
+      // getLyrics(options).then((lyrics) => console.log(lyrics));
+    // }
+  }
    
-}
+};
 </script>

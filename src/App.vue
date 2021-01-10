@@ -1,74 +1,80 @@
 <template>
   <div id="app">
+
+    <!-- Body Inner -->
+    <div class="body-inner">
     
-    <!-- Header -->
-    <header id="header" class="dark">
-      <div class="header-inner">
-        <div class="container">
+      <!-- Header -->
+      <header id="header" data-fullwidth="true">
+        <div class="header-inner">
+          <div class="container">
             <!--Logo-->
-                <div id="logo"> 
-                    <a href="/">
-                        <span class="logo-default">Perfect.Playlist</span>
-                        <span class="logo-dark">Perfect.Playlist</span>
-                    </a> 
-                </div>
-                <!--End: Logo-->
-                <!-- Search -->
-                <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                    <form class="search-form" action="search-results-page.html" method="get">
-                        <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                        <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                    </form>
-                </div>
-                <!-- end: search -->
-                <!--Header Extras-->
-                <div class="header-extras">
-                    <ul>
-                        <li>
-                            <a id="btn-search" href="#"> <i class="icon-search"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <!--end: Header Extras-->
-                <!--Navigation Resposnive Trigger-->
-                <div id="mainMenu-trigger">
-                    <a class="lines-button x"><span class="lines"></span></a>
-                </div>
-                <!--end: Navigation Resposnive Trigger-->
-                <!--Navigation-->
-                <div id="mainMenu">
-                    <div class="container">
-                        <nav>
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li class="dropdown"><a href="#">Categories</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/subjects">Subjects</a></li>
-                                        <li><a href="/songs">Songs</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">User</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/signup">Sign Up</a></li>
-                                        <li><a href="/login">Login</a></li>
-                                        <li><a href="/logout">Logout</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/admin">Admin</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!--end: Navigation-->
+            <div id="logo"> 
+              <a href="/">
+                <span class="logo-default">Perfect.Playlist</span>
+                <span class="logo-dark">Perfect.Playlist</span>
+              </a> 
             </div>
+            <!--End: Logo-->
+
+            <!-- Search -->
+            <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
+              <form class="search-form" action="search-results-page.html" method="get">
+                <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
+                <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
+              </form>
+            </div>
+            <!-- end: search -->
+
+            <!--Header Extras-->
+            <div class="header-extras">
+                <ul>
+                  <li>
+                      <a id="btn-search" href="#"> <i class="icon-search"></i></a>
+                  </li>
+                </ul>
+            </div>
+            <!--end: Header Extras-->
+            
+            <!--Navigation Resposnive Trigger-->
+            <div id="mainMenu-trigger">
+              <a class="lines-button x"><span class="lines"></span></a>
+            </div>
+            <!--end: Navigation Resposnive Trigger-->
+            <!--Navigation-->
+            <div id="mainMenu">
+              <div class="container">
+                <nav>
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown"><a href="#">Categories</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/subjects">Subjects</a></li>
+                        <li><a href="/songs">Songs</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">User</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/signup">Sign Up</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/admin">Admin</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!--end: Navigation-->
+          </div>
         </div>
-    </header>
-    <!-- end: Header -->
+      </header>
+      <!-- end: Header -->
 
-    <router-view/>
+      <router-view/>
 
-    <!-- Footer -->
-        <footer id="footer">
+      <!-- Footer -->
+      <!-- <footer id="footer">
             <div class="footer-content">
                 <div class="container">
                     <div class="row">
@@ -126,28 +132,18 @@
                     <div class="copyright-text text-center">&copy; 2019 POLO - Responsive Multi-Purpose HTML5 Template. All Rights Reserved.<a href="//www.inspiro-media.com" target="_blank" rel="noopener"> INSPIRO</a> </div>
                 </div>
             </div>
-        </footer>
-        <!-- end: Footer -->
+      </footer> -->
+      <!-- end: Footer -->
+
+    </div>
         
   </div>
 </template>
 
 
 <script>
-import { getLyrics, getSong } from 'genius-lyrics-api';
-import GeniusLyrics from "./components/GeniusLyrics.vue"
 
 export default {
-   methods:{
-    getLyrics(){
-      const options = {
-        apiKey: "FNHwCV1BrIGO0Wh6GBDem1acsw-rD8yfwHQ4lC4o0htDi6N5omW5V6H5c-IDFshbNSm28SWJpPQQMtbpGEnIQA",
-        title: 'Blinding Lights',
-        artist: 'The Weeknd',
-        optimizeQuery: true,
-      };
-      getLyrics(options).then((lyrics) => console.log(lyrics));
-    }
-  },
+  methods:{},
 }
 </script>
