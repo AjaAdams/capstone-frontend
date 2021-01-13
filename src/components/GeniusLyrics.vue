@@ -23,7 +23,7 @@ export default {
     return {
       lyrics: "",
       // options: {
-      //   apiKey: "FNHwCV1BrIGO0Wh6GBDem1acsw-rD8yfwHQ4lC4o0htDi6N5omW5V6H5c-IDFshbNSm28SWJpPQQMtbpGEnIQA",
+      //   apiKey: "<API KEY HERE>",
       //   title: 'Blinding Lights',
       //   artist: 'The Weeknd',
       //   optimizeQuery: true,
@@ -35,7 +35,7 @@ export default {
   methods:{
     // getLyrics(options){
       // const options = {
-      //   apiKey: "FNHwCV1BrIGO0Wh6GBDem1acsw-rD8yfwHQ4lC4o0htDi6N5omW5V6H5c-IDFshbNSm28SWJpPQQMtbpGEnIQA",
+      //   apiKey: "<API KEY HERE>",
       //   title: 'Blinding Lights',
       //   artist: 'The Weeknd',
       //   optimizeQuery: true,

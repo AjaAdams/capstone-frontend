@@ -17,49 +17,42 @@
       Search by subject: <input v-model="subjectFilter" type="text">
     </div>
     <!-- end: Filter Search Bar -->
+ 
+    <!-- <div v-for="subject in filterBy(subjects, subjectFilter, 'name')">
+    <router-link v-bind:to="`/subjects/${subject.name}`">
+      <h2>{{ subject.name }}</h2>
+    </router-link>
+    </div> -->
 
-    <!-- Content -->
-        <!-- Portfolio -->
-          <div v-for="subject in filterBy(subjects, subjectFilter, 'name')">
-          <router-link v-bind:to="`/subjects/${subject.name}`">
-            <h2>{{ subject.name }}</h2>
-          </router-link>
-      
-    <!-- <section id="page-content"> -->
+   
+    <section id="page-content">
       <div class="container">
-        <div id="portfolio" class="grid-layout portfolio-3-columns" data-margin="30">
-          <!-- portfolio item -->
-          <div class="portfolio-item shadow outline img-zoom ct-photography ct-media ct-branding ct-Media">
-            <div class="portfolio-item-wrap">
-              <div class="portfolio-image">
-                <a href="#"><img src="images/portfolio/77.jpg" alt=""></a>
+        <div class="row">
+          <div class="content col-lg-9">
+            <div class="row">
+              <div class="col-lg-4" v-for="subject in filterBy(subjects, subjectFilter, 'name')">
+                <div class="card">
+                  <img class="card-img-top" :src="`${subject.image_url}`" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">{{ subject.name }}</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make
+                    up the bulk.</p>
+                    <router-link v-bind:to="`/subjects/${subject.name}`">
+                      <button class="btn btn-light">See Songs</button>
+                    </router-link>
+                  </div>
+                </div>
               </div>
-              <div class="portfolio-description">
-                <a href="portfolio-page-grid-gallery.html">
-                <h3>{{ subject.name }}</h3>
-                <!-- <span>Illustrations / Graphics</span> -->
-                </a>
+              <div class="col-lg-12">
+                  <div class="line"></div>
               </div>
             </div>
           </div>
-          <!-- end: portfolio item -->
-          
-          
-          </div> 
-          <!-- end: v-for loop -->
-        
         </div>
-        <!-- end: Portfolio -->
       </div>
-      <!-- end: container -->
-    <!-- </section>  -->
-    <!-- end: Content -->
-        
+    </section>
+   
     </div>
-    <!-- end: Body Inner -->
-   
-
-   
   </div>
 
   

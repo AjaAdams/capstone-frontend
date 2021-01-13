@@ -49,12 +49,7 @@
                 <nav>
                   <ul>
                     <li><a href="/">Home</a></li>
-                    <li class="dropdown"><a href="#">Categories</a>
-                      <ul class="dropdown-menu">
-                        <li><a href="/subjects">Subjects</a></li>
-                        <li><a href="/songs">Songs</a></li>
-                      </ul>
-                    </li>
+                    <li><a href="/subjects">Subjects</a></li>
                     <li class="dropdown"><a href="#">User</a>
                       <ul class="dropdown-menu">
                         <li><a href="/signup">Sign Up</a></li>
