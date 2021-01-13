@@ -1,5 +1,37 @@
 <template>
-  <div class="login">
+<!-- prettier-ignore -->
+
+  <div class="row">
+    <div class="col-lg-5 center p-50 background-white b-r-6">
+      <h3>Login to your Account</h3>
+      <form v-on:submit.prevent="submit()">
+        <div class="form-group">
+          <label class="sr-only">Email</label>
+          <input v-model="email" type="text" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group m-b-5">
+          <label class="sr-only">Password</label>
+          <input v-model="password_digest" type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group form-inline text-left">
+          <div class="form-check">
+            <label>
+              <input type="checkbox"><small class="m-l-10"> Remember me</small>
+            </label>
+          </div>
+        </div>
+        <div class="text-left form-group">
+          <button type="submit" class="btn">Login</button>
+        </div>
+      </form>
+      <p class="small">Don't have an account yet? <a href="/signup">Register New Account</a>
+      </p>
+
+      <button @click="spotifyAuth()">Authorize Your Spotify</button>
+    </div>
+  </div>
+
+  <!-- <div class="login">
     <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>
@@ -15,7 +47,9 @@
       </div>
       <input type="submit" class="btn btn-primary" value="Submit">
     </form>
-  </div>
+  </div> -->
+
+  
 </template>
 
 <script>
@@ -49,6 +83,9 @@ export default {
           this.email = "";
           this.password_digest = "";
         });
+    },
+    spotifyAuth(){
+      this.$router.push({ path: '/auth/spotify'})
     }
   }
 };

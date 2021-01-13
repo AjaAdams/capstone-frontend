@@ -10,6 +10,7 @@ import Login from '../views/Login.vue'
 import Signup from '../views/Signup.vue'
 import Logout from '../views/Logout.vue'
 import GeniusLyrics from '../components/GeniusLyrics'
+import SearchResults from '../views/SearchResults.vue'
 
 Vue.use(VueRouter)
 
@@ -48,7 +49,7 @@ const routes = [
     component: Admin
   },
   {
-    path: '/subjects/:id',
+    path: '/subjects/:name',
     name: 'subject-show',
     component: SubjectShow
   },
@@ -71,6 +72,12 @@ const routes = [
     path: '/lyrics',
     name: 'GeniusLyrics',
     component: GeniusLyrics
+  },
+  {
+    path: '/search',
+    name: 'SearchResults',
+    component: SearchResults,
+    props: true
   },
 ]
 

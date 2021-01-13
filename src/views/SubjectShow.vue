@@ -1,10 +1,14 @@
 <template>
   <div class="show">
    <h1>{{ subject.name }}</h1>
-   <div v-for="song in song_subjects">
+   <div v-for="song in subject.songs">
+     
      <h2> {{ song.title }}</h2>
+     <h3>{{ song.artist }}</h3>
    </div>
-  </div>
+
+   
+</div>
 </template>
 
 <style>
@@ -18,15 +22,17 @@ export default {
     return {
       song: {},
       song_subjects: [],
-      subject: {}
+      subject: {},
+      songs: []
     };
   },
   created: function() {
-    axios.get("/api/subjects/" + this.$route.params.id).then(response => {
+    axios.get("/api/subjects/" + this.$route.params.name).then(response => {
       this.subject = response.data;
       console.log("show song", this.subject)
     });
   },
+
   methods: {}
 };
 </script>
