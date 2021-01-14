@@ -9,8 +9,8 @@
                             <h2>{{ song.title }}</h2>
                             <h4>{{ song.artist }}</h4>
                             <img v-bind:src="song.image_url" v-bind:alt="song.title" class="img-fluid rounded" > <br><br>
-                            <audio controls style="width: 205px">
-                            <source src="https://p.scdn.co/mp3-preview/ce8ace0ec425840416be78db07cf50dd331eed4f?cid=3eb1d1e882924e078defd9e195c759b8">Your browser does not support audio.</audio>
+                            <audio :src="song.preview_url" controls style="width: 205px">
+                            Your browser does not support audio.</audio>
                             <!-- <button type="button" class="btn btn-light" v-on:click="getLyrics(options)">Show Lyrics</button><br> -->
                             <button type="button" class="btn btn-light" @click="spotifyAuth()">Add song to Spotify</button>
                         </div>

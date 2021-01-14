@@ -13,7 +13,7 @@
    <!-- end: Page title -->
     
     <!-- Filter Search Bar -->
-    <div>
+    <div class="heading-text text-center">
       Search by subject: <input v-model="subjectFilter" type="text">
     </div>
     <!-- end: Filter Search Bar -->
@@ -28,15 +28,17 @@
     <section id="page-content">
       <div class="container">
         <div class="row">
-          <div class="content col-lg-9">
+          <div class="content col-lg-12">
             <div class="row">
               <div class="col-lg-4" v-for="subject in filterBy(subjects, subjectFilter, 'name')">
                 <div class="card">
-                  <img class="card-img-top" :src="`${subject.image_url}`" alt="Card image cap">
+                  <router-link v-bind:to="`/subjects/${subject.name}`">
+                    <img class="card-img-top" :src="`${subject.image_url}`" alt="Card image cap">
+                  </router-link>
                   <div class="card-body">
                     <h4 class="card-title">{{ subject.name }}</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make
-                    up the bulk.</p>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make
+                    up the bulk.</p> -->
                     <router-link v-bind:to="`/subjects/${subject.name}`">
                       <button class="btn btn-light">See Songs</button>
                     </router-link>

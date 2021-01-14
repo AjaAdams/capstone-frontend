@@ -41,9 +41,11 @@
       Search by subject: <input v-model="subjectFilter" type="text">
     </div> -->
     <div v-for="song in searchResults">
+      <ul class="list-icon list-icon-arrow">
       <router-link v-bind:to="`/songs/${song.id}`">
-      <h1>{{ song.title }}</h1>
+        <li>{{ song.title }}</li>
       </router-link>
+      </ul>
     </div>
     
   </div>
